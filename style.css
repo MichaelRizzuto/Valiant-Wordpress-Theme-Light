@@ -1,0 +1,137 @@
+/* Global */
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Roboto, sans-serif;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Header */
+
+.header {
+	width: 100vw;
+	height: 5rem;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header img {
+	width: 4rem;
+	height: 4rem;
+	margin-top: 0.5rem;
+	margin-left: 5rem;
+}
+
+.header h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: -3.75rem;
+	margin-left: 10rem;
+}
+
+.header ul {
+	text-align: right;
+	margin-top: -2.25rem;
+	margin-right: 5rem;
+}
+
+.header li {
+	display: inline;
+	font-size: 1.25rem;
+	font-weight: 300;
+	margin-left: 0.25rem;
+	margin-right: 0.25rem;
+	transition: all ease-in-out 0.2s;
+}
+
+.header li a {
+	color: #000000;
+	text-decoration: none;
+	transition: all ease-in-out 0.2s;
+}
+
+.header li a:hover {
+	color: #808080;
+}
+
+.header p {
+	display: none;
+}
+
+/* Content */
+
+/* Footer */
+
+/* Mobile Support */
+
+@media only screen and (max-width: 1000px) {
+	.header img {
+		margin-left: calc(50vw - 4rem / 2);
+	}
+
+	.header h1 {
+		display: none;
+	}
+
+	.header ul {
+		background-color: #DCDCDC;
+		text-align: left;
+		margin-top: 1rem;
+		margin-right: 0;
+		height: calc(100vh - 6.75rem);
+		width: 100vw;
+		padding-top: 1rem;
+		display: none;
+	}
+
+	.header li {
+		display: block;
+		font-size: 2rem;
+		margin: 1.5rem;
+	}
+
+	.header li:hover {
+		margin-left: 2rem;
+	}
+
+	.header p {
+		display: block;
+		font-size: 2rem;
+		position: absolute;
+		top: 1.15rem;
+		right: 2rem;
+		border: 0.2rem solid #000000;
+		border-radius: 4px;
+		width: 2.5rem;
+		text-align: center;
+		padding-top: 0.1rem;
+	}
+
+	.header button {
+		background-color: rgba(0, 0, 0, 0);
+		border: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 5rem;
+	}
+
+	.header button:hover {
+		cursor: pointer;
+	}
+
+	.header button:focus {
+		outline: 0;
+	}
+}
