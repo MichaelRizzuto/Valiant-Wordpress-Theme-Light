@@ -32,7 +32,9 @@
 		<div class="header" style="border-bottom: 0.5rem solid <?php echo $accent ?>">
 			<img src="<?php echo $logo ?>"/>
 			<h1><?php echo get_bloginfo($name) ?></h1>
-			<?php wp_nav_menu(array('navbar' => 'navbar-menu')); ?>
+			<div id="navbar_container" class="navbar-container">
+				<?php wp_nav_menu(array('navbar' => 'navbar-menu')); ?>
+			</div>
 			<p><i id="dropdown_button" class="fas fa-bars"></i></p>
 			<button onclick="toggleMobileNavigation()" class="navbar-dropdown"></button>
 		</div>
