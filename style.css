@@ -75,6 +75,22 @@ html {
 
 /* Footer */
 
+footer {
+	background-color: #EEEEEE;
+	width: 100vw;
+	min-height: 1rem;
+}
+
+footer h1 {
+	font-size: 1rem;
+	font-weight: 300;
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
 /* Mobile Support */
 
 @media only screen and (max-width: 1000px) {

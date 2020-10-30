@@ -8,7 +8,6 @@ function valiant_customize_register($wp_customize) {
 	));
 
 		// Header Logo
-
 		$wp_customize->add_setting('header_logo', array(
 			'transport' => 'refresh',
 		));
@@ -30,6 +29,35 @@ function valiant_customize_register($wp_customize) {
 			'label' => __('Header Accent'),
 			'section' => 'valiant_header_options',
 			'settings' => 'header_accent',
+		)));
+	// Footer Options
+	$wp_customize->add_section('valiant_footer_options', array(
+		'title' => __('Footer Options'),
+		'priority' => 176,
+	));
+
+		// Footer Logo
+		$wp_customize->add_setting('footer_logo', array(
+			'transport' => 'refresh',
+		));
+
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer-logo', array(
+			'label' => __('Footer Logo'),
+			'section' => 'valiant_footer_options',
+			'settings' => 'footer_logo',
+			'description' => '512 height recommended'
+		)));
+
+		// Footer Copyright
+		$wp_customize->add_setting('footer_copyright', array(
+			'transport' => 'refresh',
+		));
+
+		$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footer-copyright', array(
+			'label' => __('Footer Copright'),
+			'section' => 'valiant_footer_options',
+			'settings' => 'footer_copyright',
+			'description' => 'Supports a tags',
 		)));
 }
 add_action('customize_register', 'valiant_customize_register');
