@@ -30,6 +30,7 @@ function valiant_customize_register($wp_customize) {
 			'section' => 'valiant_header_options',
 			'settings' => 'header_accent',
 		)));
+
 	// Footer Options
 	$wp_customize->add_section('valiant_footer_options', array(
 		'title' => __('Footer Options'),
@@ -58,6 +59,24 @@ function valiant_customize_register($wp_customize) {
 			'section' => 'valiant_footer_options',
 			'settings' => 'footer_copyright',
 			'description' => 'Supports a tags',
+		)));
+
+	// Home Options
+	$wp_customize->add_section('valiant_home_options', array(
+		'title' => __('Home Options'),
+		'priority' => 177,
+	));
+
+		// Home Slideshow
+		$wp_customize->add_setting('home_slideshow', array(
+			'transport' => 'refresh',
+		));
+
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'home-slideshow', array(
+			'label' => __('Home Slideshow'),
+			'section' => 'valiant_home_options',
+			'settings' => 'home_slideshow',
+			'description' => 'Images displayed on slideshow',
 		)));
 }
 add_action('customize_register', 'valiant_customize_register');
